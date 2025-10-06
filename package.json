@@ -1,0 +1,48 @@
+{
+  "name": "mineflayer-replay",
+  "author": "Northernside <contact@northernsi.de>",
+  "description": "A Mineflayer plugin to record Minecraft bot sessions and replay them on a multiplayer server.",
+  "license": "MIT",
+  "version": "0.0.1",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mineflayer",
+    "minecraft",
+    "replay",
+    "recorder",
+    "bot"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Northernside/mineflayer-replay"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/node": "^20.0.0",
+    "typescript": "^5"
+  },
+  "peerDependencies": {
+    "mineflayer": "^4.0.0"
+  },
+  "dependencies": {
+    "minecraft-protocol": "^1.0.0",
+    "msgpackr": "^1.11.5"
+  }
+}
